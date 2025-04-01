@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Garden theme colors
+				garden: {
+					soil: '#8B4513',
+					lightSoil: '#A67C52',
+					foliage: '#4CAF50',
+					darkFoliage: '#2E7D32',
+					tomato: '#E53935',
+					carrot: '#FF8F00',
+					lettuce: '#AED581',
+					cucumber: '#66BB6A',
+					pepper: '#FF5722',
+					onion: '#9575CD',
+					bean: '#7CB342',
 				}
 			},
 			borderRadius: {
@@ -84,11 +99,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-gentle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
+				},
+				'bounce-gentle': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-gentle': 'pulse-gentle 2s infinite ease-in-out',
+				'bounce-gentle': 'bounce-gentle 3s infinite ease-in-out',
 			}
 		}
 	},
