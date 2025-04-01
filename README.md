@@ -2,6 +2,9 @@
 
 ⚠️⚠️⚠️ Just playing around with lovable.dev, haven't really reviewed the code ⚠️⚠️⚠️
 
+<img width="1305" alt="image" src="https://github.com/user-attachments/assets/bc3a804d-2a17-4a77-8e72-ccbf1d7fcac2" />
+
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/186cecae-2073-4489-9b57-8f3664df527d
