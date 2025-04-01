@@ -8,7 +8,7 @@ import { toast } from "sonner";
 
 interface VegetableSidebarProps {
   selectedVegetable: string | null;
-  onVegetableSelect: (id: string) => void;
+  onVegetableSelect: (id: string | null) => void;
   onClearGarden: () => void;
   onSaveGarden: () => void;
 }
@@ -29,6 +29,15 @@ const VegetableSidebar = ({
     toast("Garden layout saved");
   };
 
+  const handleVegetableClick = (id: string) => {
+    // If the vegetable is already selected, deselect it
+    if (selectedVegetable === id) {
+      onVegetableSelect(null);
+    } else {
+      onVegetableSelect(id);
+    }
+  };
+
   return (
     <div className="bg-card border rounded-lg shadow-sm p-4 flex flex-col h-full">
       <h2 className="text-xl font-semibold mb-4">Vegetables</h2>
@@ -41,7 +50,7 @@ const VegetableSidebar = ({
           <VegetableItem
             key={vegetable.id}
             vegetable={vegetable}
-            onClick={() => onVegetableSelect(vegetable.id)}
+            onClick={() => handleVegetableClick(vegetable.id)}
             isSelected={selectedVegetable === vegetable.id}
           />
         ))}
